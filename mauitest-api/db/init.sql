@@ -57,6 +57,8 @@ RESTART IDENTITY
 CASCADE;
 
 
+
+
 -- 20 musical genres
 INSERT INTO genres(name) VALUES
 ('Pop'),

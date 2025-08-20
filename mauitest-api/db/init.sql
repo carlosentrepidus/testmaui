@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS playlist_songs (
   PRIMARY KEY (playlist_id, song_id)
 );
 
+
 -- ===== Indexes =====
 CREATE INDEX IF NOT EXISTS ix_songs_genre_id       ON songs(genre_id);
 CREATE INDEX IF NOT EXISTS ix_songs_title          ON songs(title);
@@ -46,11 +47,15 @@ CREATE INDEX IF NOT EXISTS ix_playlist_songs_song  ON playlist_songs(song_id);
 
 -- ===== Seed (idempotent) =====
 -- Truncation order respects FK dependencies.
-TRUNCATE TABLE playlist_songs RESTART IDENTITY;
-TRUNCATE TABLE playlists RESTART IDENTITY;
-TRUNCATE TABLE users RESTART IDENTITY;
-TRUNCATE TABLE songs RESTART IDENTITY;
-TRUNCATE TABLE genres RESTART IDENTITY;
+TRUNCATE TABLE
+  playlist_songs,
+  playlists,
+  users,
+  songs,
+  genres
+RESTART IDENTITY
+CASCADE;
+
 
 -- 20 musical genres
 INSERT INTO genres(name) VALUES

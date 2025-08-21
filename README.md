@@ -12,7 +12,7 @@ Este repositorio es una **plantilla** para la prueba técnica. Contiene dos proy
 1. **Crea tu repositorio privado desde esta plantilla**
    - Pulsa el botón **“Use this template”** arriba a la derecha.
    - Crea un repositorio **PRIVADO** en tu cuenta de GitHub.
-   - Añade como colaborador a: `<TU_USUARIO_GITHUB>`.
+   - Añade como colaborador a: `carlos.suarez@entrepidus.com`.
 
 2. **Crea una rama de trabajo**
    ```bash
